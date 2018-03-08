@@ -13,9 +13,9 @@ For your information, CN tag stands for Chinese, and MALAYSIA tag represents Mal
 
 1) Content with at least 40% of Chinese words authored originally by the blogger
 2) Translated content directly from translating tool does not count
-3) If the content has nothing concern to Malaysian, nor in Chinese language, then you have no reason to use this tag. We will not upvote you.
+3) If the content has nothing concern to Malaysian, nor in Chinese language, then you have no reason to use this tag.
 
-Therefore, we recommended that do not use #cn-malaysia if the requirement is not met.
+Therefore, we recommended that do not use #cn-malaysia if the requirement is not met. Hence, there will not be any vote from our team.
 
 Thank you for your understanding.
 
