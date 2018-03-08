@@ -7,7 +7,7 @@ const comment = data => {
   const commentContent = `
 Hello @${data.author},
 Thank you for having interest in #cn-malaysia. For your information, CN stands for Chinese, and of course MALAYSIA, which means that the content or the author is a Malaysian are supposed to use this tag for our locals to track their posts in their preferred language, in this circumstances Chinese is the preferred language. Few of the criteria are simple:
-1) Content with atleast 40% of Chinese words authored originally by the blogger
+1) Content with at least 40% of Chinese words authored originally by the blogger
 2) Translated content directly from translating tool does not count
 3) If the content has nothing concern to Malaysian, nor in Chinese language, then you have no reason to use this tag. We will not upvote you.
 You see? It’s simple. Chinese . Malaysia. Let us keep things simple. If you need a Chinese language tuition, I can recommend you some online tutorial.
