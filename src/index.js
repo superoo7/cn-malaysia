@@ -7,7 +7,7 @@ const { comment } = require('./steem');
 console.log();
 
 // CONST
-const tagToLookFor = 'teammalaysiadevtest';
+const tagToLookFor = 'cn-malaysia';
 
 steem.api.streamTransactions('head', function(err, result) {
   if (err) {
