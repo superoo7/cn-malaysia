@@ -9,11 +9,14 @@ Hello @${data.author},
 
 Thank you for having interest in using #cn-malaysia tag.
 
-For your information, CN tag stands for Chinese, and MALAYSIA tag represents Malaysia and Malaysian authors. The purpose of this tag is for our local community to track their posts in their preferred language, in this circumstances Chinese is the preferred language. Below are the criteria:
+For your information, CN tag stands for Chinese, and MALAYSIA tag represents Malaysia and Malaysian authors.
+Malaysians writing in Chinese are encouraged to use this tag for us to easily identify Malaysians and also a channel where we can announce all upcoming events in Malaysia.
+
+Below are the criteria:
 
 1) Content with at least 40% of Chinese words authored originally by the blogger
 2) Translated content directly from translating tool does not count
-3) If the content has nothing concern to Malaysian, nor in Chinese language, then you have no reason to use this tag.
+3) If the content has nothing concern to Malaysian, nor in Chinese language, do refrain from using the tag #cn-malaysia . Further usage would be deemed as tag abuse and further action would be taken.
 
 Therefore, we recommended that do not use #cn-malaysia if the requirement is not met. Hence, there will not be any vote from our team.
 
