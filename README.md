@@ -16,3 +16,13 @@ Create a `.env` to store your posting key and username.
 ACCOUNT_KEY=POSTING_KEY_HERE
 ACCOUNT_NAME=STEEM_NAME
 ```
+
+Starting the server for development `npm run dev`
+> I did not use babel or any minify work flow
+
+For production, I would suggest using PM2 Library. (Install with `npm install -g pm2`)
+
+Then, run `pm2 start src/index.js`
+
+
+
