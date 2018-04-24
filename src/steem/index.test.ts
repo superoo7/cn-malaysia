@@ -6,7 +6,9 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 if (!process.env.ACCOUNT_NAME || !process.env.ACCOUNT_KEY) throw new Error('ENV variable missing')
+// @ts-ignore
 let ACCOUNT_NAME: string = process.env.ACCOUNT_NAME
+// @ts-ignore
 let ACCOUNT_KEY: string = process.env.ACCOUNT_KEY
 
 const client = new Client('https://api.steemit.com')

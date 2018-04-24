@@ -1,4 +1,4 @@
-const TAG = 'life'
+const TAG = 'cn-malaysia'
 
 const COMMENT = (author: string): string => {
   return `

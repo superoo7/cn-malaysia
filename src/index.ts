@@ -15,7 +15,9 @@ import { cnPercentage } from './regex'
 // Environment Init
 dotenv.config()
 if (!process.env.ACCOUNT_NAME || !process.env.ACCOUNT_KEY) throw new Error('ENV variable missing')
+// @ts-ignore
 let ACCOUNT_NAME: string = process.env.ACCOUNT_NAME
+// @ts-ignore
 let ACCOUNT_KEY: string = process.env.ACCOUNT_KEY
 if (ACCOUNT_NAME === '' || ACCOUNT_NAME === '') die('Check .env file')
 

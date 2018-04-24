@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/event-stream": "^3.3.33",
+    "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
     "dotenv-safe": "^5.0.1",
     "dsteem": "^0.8.7",
@@ -14,8 +15,8 @@
     "steem": "^0.7.1"
   },
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "test": "nodemon src/test/index.test.js"
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js\" ",
+    "test": "concurrently \"tsc -w\" \"jest --watchAll\" "
   },
   "devDependencies": {
     "@types/bytebuffer": "^5.0.37",
