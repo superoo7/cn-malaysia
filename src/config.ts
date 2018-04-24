@@ -1,11 +1,8 @@
-const steem = require('steem');
-const dotenv = require('dotenv');
+const TAG = 'life'
 
-dotenv.config();
-
-const comment = data => {
-  const commentContent = `
-Hello @${data.author},
+const COMMENT = (author: string): string => {
+  return `
+Hello @${author},
 
 Thank you for having interest in using #cn-malaysia tag.
 
@@ -20,36 +17,17 @@ Below are the criteria:
 
 Therefore, we recommended that do not use #cn-malaysia if the requirement is not met. Hence, there will not be any vote from our team.
 
-Thank you for your understanding.
+Thank you for your understanding. 
+
+P.S. If you think that there is an error about this message, you can refer to superoo7 on steemit.
 
 Best regards,
 #cn-malaysia, #teammalaysia
-  `;
-
-  return steem.broadcast.comment(
-    process.env.ACCOUNT_KEY,
-    data.author,
-    data.permlink,
-    process.env.ACCOUNT_NAME,
-    randomString(),
-    '',
-    commentContent,
-    { tags: ['cn-malaysia'], app: 'cn-malaysia' },
-    function(err, result) {
-      console.log(err, result);
-    }
-  );
-};
-
-function randomString() {
-  let string = '';
-  let allowedChars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  for (var i = 0; i < 32; i++) {
-    string += allowedChars.charAt(
-      Math.floor(Math.random() * allowedChars.length)
-    );
-  }
-  return string + '-post';
+  `
 }
 
-module.exports = { comment };
+const WHITELIST: string[] = ['superoo7']
+// percentage allowed for CN words (e.g. 20%)
+const PERCENTAGE: number = 20
+
+export { TAG, COMMENT, WHITELIST, PERCENTAGE }
