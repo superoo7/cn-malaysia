@@ -7,4 +7,6 @@ describe('functions', () => {
   it('returns false if a string does not exist an array of string', () => {
     expect(arrayContains('a', ['z', 'b', 'd', 'c'])).toBe(false)
   })
+
+  // TODO: write test for json check
 })

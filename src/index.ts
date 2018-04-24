@@ -5,7 +5,7 @@ import * as es from 'event-stream'
 import * as util from 'util'
 
 // file
-import { arrayContains, die } from './functions'
+import { arrayContains, die, save } from './functions'
 import { TAG, WHITELIST, PERCENTAGE } from './config'
 import { getContent, comment } from './steem'
 import { cnPercentage } from './regex'
@@ -61,10 +61,22 @@ stream.on('data', async operation => {
         let percentage = cn.ratio
         // if less than treshold percentage
         if (percentage < PERCENTAGE / 100) {
-          // comment(client, author, key)
-          comment(client, author, permlink, key, ACCOUNT_NAME).catch(() =>
-            console.error("Couldn't comment on the violated post")
-          )
+          // Check wether commented before
+          await save(`@${author}/${permlink}`)
+            .then(isSaved => {
+              if (!!isSaved) {
+                // Send Comment
+                comment(client, author, permlink, key, ACCOUNT_NAME).catch(() =>
+                  console.error("Couldn't comment on the violated post")
+                )
+                return
+              } else {
+                return
+              }
+            })
+            .catch(() => {
+              console.error("Couldn't save json")
+            })
         } else {
           return
         }
