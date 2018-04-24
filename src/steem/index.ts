@@ -18,7 +18,7 @@ export const comment = async (
   key: PrivateKey,
   postingAuthor: string
 ) => {
-  const jsonMetadata = 'cn-malaysia'
+  const jsonMetadata = ''
 
   const comment_permlink = new Date()
     .toISOString()

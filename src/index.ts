@@ -25,7 +25,7 @@ if (ACCOUNT_NAME === '' || ACCOUNT_NAME === '') die('Check .env file')
 
 const client = new Client('https://api.steemit.com')
 const db = new DatabaseAPI(client)
-let key = PrivateKey.fromLogin(ACCOUNT_NAME, ACCOUNT_KEY, 'posting')
+let key = PrivateKey.from(ACCOUNT_KEY)
 const stream = client.blockchain.getOperationsStream({ mode: BlockchainMode.Latest })
 
 console.log('Operation started')
@@ -65,6 +65,7 @@ stream.on('data', async operation => {
           await save(`@${author}/${permlink}`)
             .then(isSaved => {
               if (!!isSaved) {
+                console.log('sendingComment')
                 // Send Comment
                 comment(client, author, permlink, key, ACCOUNT_NAME).catch(() =>
                   console.error("Couldn't comment on the violated post")
